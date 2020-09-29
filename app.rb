@@ -19,7 +19,7 @@ get '/contacts' do
 
 end
 
-get '/something' do
-	erb :something
+get '/visit' do
+	erb :visit
 end
 
