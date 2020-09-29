@@ -18,3 +18,8 @@ get '/contacts' do
 	erb :contacts
 
 end
+
+get '/something' do
+	erb :something
+end
+
