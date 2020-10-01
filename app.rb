@@ -21,15 +21,15 @@ end
 
 post '/contacts' do
 
-	@user_name = params[:user_name]
+	
 	@user_email = params[:user_email]
-	@subject = params[:subject]
-	@user_message = params[:user_message]
+	#@subject = params[:subject]
+	@user_message = params[:text_user]
 
-	erb :contact
+	
 
-	f = File.open './contacts', 'a'
-	f.write "name: #{@user_name};email : #{@user_email}\n#{@subject}\n#{@user_message}"
+	f = File.open './public/contacts.txt', 'a'
+	f.write "\nNew message:\nemail : #{@user_email}\nMessage:\n#{@user_message}"
 	f.close
 
 end
@@ -42,9 +42,10 @@ post '/visit' do
 	@user_name = params[:user_name]
 	@user_phone = params[:user_phone]
 	@date_time = params[:date_time]
+	@choice_barber = params[:choice_barber]
 
 	f = File.open './public/users.txt', 'a'
-	f.write "name : #{@user_name}; phone : #{@user_phone}; date : #{@date_time} \n"
+	f.write "name : #{@user_name}; phone : #{@user_phone}; date : #{@date_time} \nChoose barber is #{@choice_barber}"
 	f.close
 
 end
