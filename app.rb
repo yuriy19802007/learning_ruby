@@ -43,9 +43,10 @@ post '/visit' do
 	@user_phone = params[:user_phone]
 	@date_time = params[:date_time]
 	@choice_barber = params[:choice_barber]
+	@color = params[:color]
 
 	f = File.open './public/users.txt', 'a'
-	f.write "name : #{@user_name}; phone : #{@user_phone}; date : #{@date_time} \nChoose barber is #{@choice_barber}"
+	f.write "name : #{@user_name}; phone : #{@user_phone}; date : #{@date_time} \nChoose barber is #{@choice_barber},\nColor : #{@color}"
 	f.close
 
 end
