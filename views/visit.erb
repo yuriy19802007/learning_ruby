@@ -12,23 +12,27 @@
   <div class="form-group">
 
     <label for="exampleInputEmail1">Your name</label>
-    <input name="user_name" type="text" class="form-control" placeholder="your name">
+    <input name="user_name" type="text" id="bbb" class="form-control" placeholder="your name">
     
     <label for="exampleInputEmail1">Your phone</label>
-    <input name="user_phone" type="text" class="form-control" placeholder="your phone">
+    <input name="user_phone" type="text" class="form-control ccc" placeholder="your phone">
 
     <label for="exampleInputEmail1">Date and time</label>
-    <input name="date_time" type="text" class="form-control" placeholder="date">
+    <input name="date_time" type="text" class="form-control ccc" placeholder="date">
 
   </div>
   <select name='choice_barber'>
     <option>Jassi Simpson</option>
     <option>Walter White</option>
   </select>
-
+   <p>
  
   <button type="submit" class="btn btn-primary">Booking</button>
 </form>
+<script type="text/javascript">
+  $('#bbb').css('background-color','yellow');
+  $('.ccc').css('background-color','blue');
+ </script>
 
 
 
